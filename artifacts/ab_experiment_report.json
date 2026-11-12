@@ -1,0 +1,172 @@
+{
+  "duration_days": 14,
+  "total_emails_evaluated": 343535,
+  "num_sender_clusters": 1200,
+  "prevented_leaks_control": 3627,
+  "prevented_leaks_treatment": 6334,
+  "relative_prevented_leak_lift_pct": 74.63,
+  "cuped_variance_reduction_pct": 54.64,
+  "final_t_stat": 10.3267,
+  "final_p_value": 7.825e-24,
+  "final_anytime_msprt_p_value": 0.0,
+  "guardrails": {
+    "vip_nudge_override_rate": 0.148,
+    "vip_guardrail_passed": true,
+    "trt_fp_per_10k_emails": 13.22,
+    "ctrl_fp_per_10k_emails": 32.09,
+    "p99_scoring_latency_ms": 4.2,
+    "latency_sla_passed": true
+  },
+  "ship_recommendation": "LAUNCH_GA_100_PERCENT",
+  "faulty_canary_rollback_verification": {
+    "scenario": "Faulty canary deploy missing recruiter & VIP cold-outreach guardrails (5% traffic)",
+    "observed_vip_nudge_override_rate": 0.492,
+    "max_allowed_vip_nudge_override_rate": 0.35,
+    "observed_p99_latency_ms": 6.4,
+    "rollback_triggered": true,
+    "triggered_at_hour": 6,
+    "automated_action": "AUTO_REVERT_TO_STABLE_BUNDLE_AND_PAGE_MED_ONCALL"
+  },
+  "daily_trajectory": [
+    {
+      "day": 1,
+      "raw_lift_per_sender": 0.33,
+      "raw_se": 0.06,
+      "cuped_lift_per_sender": 0.3238,
+      "cuped_se": 0.0512,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 15.4,
+      "ctrl_fp_per_10k": 37.93
+    },
+    {
+      "day": 2,
+      "raw_lift_per_sender": 0.6633,
+      "raw_se": 0.1053,
+      "cuped_lift_per_sender": 0.6506,
+      "cuped_se": 0.0839,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 14.19,
+      "ctrl_fp_per_10k": 35.16
+    },
+    {
+      "day": 3,
+      "raw_lift_per_sender": 0.9483,
+      "raw_se": 0.1473,
+      "cuped_lift_per_sender": 0.9292,
+      "cuped_se": 0.1118,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 14.51,
+      "ctrl_fp_per_10k": 34.06
+    },
+    {
+      "day": 4,
+      "raw_lift_per_sender": 1.285,
+      "raw_se": 0.1962,
+      "cuped_lift_per_sender": 1.2587,
+      "cuped_se": 0.1454,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 12.71,
+      "ctrl_fp_per_10k": 34.02
+    },
+    {
+      "day": 5,
+      "raw_lift_per_sender": 1.6283,
+      "raw_se": 0.2408,
+      "cuped_lift_per_sender": 1.5951,
+      "cuped_se": 0.174,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 13.08,
+      "ctrl_fp_per_10k": 31.6
+    },
+    {
+      "day": 6,
+      "raw_lift_per_sender": 1.8967,
+      "raw_se": 0.2815,
+      "cuped_lift_per_sender": 1.8573,
+      "cuped_se": 0.2008,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 12.53,
+      "ctrl_fp_per_10k": 31.47
+    },
+    {
+      "day": 7,
+      "raw_lift_per_sender": 2.1967,
+      "raw_se": 0.3183,
+      "cuped_lift_per_sender": 2.1511,
+      "cuped_se": 0.2218,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 12.34,
+      "ctrl_fp_per_10k": 32.46
+    },
+    {
+      "day": 8,
+      "raw_lift_per_sender": 2.5517,
+      "raw_se": 0.3676,
+      "cuped_lift_per_sender": 2.4987,
+      "cuped_se": 0.2539,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 12.43,
+      "ctrl_fp_per_10k": 32.62
+    },
+    {
+      "day": 9,
+      "raw_lift_per_sender": 2.8267,
+      "raw_se": 0.4144,
+      "cuped_lift_per_sender": 2.7666,
+      "cuped_se": 0.2844,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 12.6,
+      "ctrl_fp_per_10k": 32.36
+    },
+    {
+      "day": 10,
+      "raw_lift_per_sender": 3.2083,
+      "raw_se": 0.4645,
+      "cuped_lift_per_sender": 3.1411,
+      "cuped_se": 0.3197,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 12.5,
+      "ctrl_fp_per_10k": 32.42
+    },
+    {
+      "day": 11,
+      "raw_lift_per_sender": 3.545,
+      "raw_se": 0.5069,
+      "cuped_lift_per_sender": 3.4711,
+      "cuped_se": 0.3462,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 12.76,
+      "ctrl_fp_per_10k": 32.12
+    },
+    {
+      "day": 12,
+      "raw_lift_per_sender": 3.8483,
+      "raw_se": 0.5471,
+      "cuped_lift_per_sender": 3.7685,
+      "cuped_se": 0.373,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 13.46,
+      "ctrl_fp_per_10k": 32.19
+    },
+    {
+      "day": 13,
+      "raw_lift_per_sender": 4.155,
+      "raw_se": 0.5872,
+      "cuped_lift_per_sender": 4.0687,
+      "cuped_se": 0.3972,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 13.49,
+      "ctrl_fp_per_10k": 32.39
+    },
+    {
+      "day": 14,
+      "raw_lift_per_sender": 4.5117,
+      "raw_se": 0.6352,
+      "cuped_lift_per_sender": 4.418,
+      "cuped_se": 0.4278,
+      "anytime_valid_p_value": 0.0,
+      "trt_fp_per_10k": 13.22,
+      "ctrl_fp_per_10k": 32.09
+    }
+  ]
+}

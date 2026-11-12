@@ -1,0 +1,97 @@
+{
+  "pipeline_runtime_sec": 44.6,
+  "dataset_counts": {
+    "drift": {
+      "count": 3000,
+      "sum": 96,
+      "mean": 0.032
+    },
+    "test": {
+      "count": 8000,
+      "sum": 278,
+      "mean": 0.03475
+    },
+    "train": {
+      "count": 14000,
+      "sum": 445,
+      "mean": 0.03179
+    },
+    "val": {
+      "count": 5000,
+      "sum": 131,
+      "mean": 0.0262
+    },
+    "warmup": {
+      "count": 8000,
+      "sum": 0,
+      "mean": 0.0
+    }
+  },
+  "signal_combiner_weights": {
+    "graph_specialist_logit_weight": 0.1541,
+    "lexical_coherence_logit_weight": 0.1786,
+    "dlp_context_logit_weight": 0.0524,
+    "lgbm_interaction_logit_weight": 0.77,
+    "intercept": -0.5922
+  },
+  "top_12_features_by_gain_pct": {
+    "sem_attachment_org_mismatch": 30.96,
+    "lex_salutation_best_name_sim": 13.25,
+    "dlp_composite_blast_radius": 12.91,
+    "sem_topic_recipient_cosine_sim": 11.14,
+    "sem_recipient_count_log": 5.37,
+    "graph_min_org_domain_prior_count": 4.73,
+    "dlp_confidential_attachment_score": 3.57,
+    "lex_autocomplete_prefix_collision_gap": 3.35,
+    "graph_sender_external_ratio": 2.37,
+    "graph_sender_cold_outreach_rate": 2.35,
+    "graph_min_org_domain_share": 2.05,
+    "sem_recipient_domain_entropy": 1.77
+  },
+  "champion_h4_metrics": {
+    "model_name": "H4_OutGuard_Hybrid",
+    "pr_auc": 0.9953,
+    "roc_auc": 0.9998,
+    "brier_score": 0.00327,
+    "ece": 0.00357,
+    "recall_at_fpr_0_05pct": 0.9424,
+    "recall_at_fpr_0_05pct_ci95": [
+      0.9118,
+      0.982
+    ],
+    "recall_at_fpr_0_25pct": 0.9856,
+    "recall_at_fpr_0_25pct_ci95": [
+      0.9676,
+      0.9964
+    ],
+    "val_locked_block_threshold": 0.07658,
+    "val_locked_nudge_threshold": 0.01933,
+    "test_realized_block_fpr": 0.00065,
+    "test_realized_block_precision": 0.9817,
+    "test_realized_block_recall": 0.964,
+    "test_realized_nudge_fpr": 0.00142,
+    "test_realized_nudge_precision": 0.9613,
+    "test_realized_nudge_recall": 0.982,
+    "soc_false_alerts_per_10k_benign": 14.25,
+    "vip_benign_fpr": 0.00229
+  },
+  "python_online_latency_ms": {
+    "p50_ms": 5.36,
+    "p95_ms": 6.264,
+    "p99_ms": 9.239,
+    "mean_ms": 5.513
+  },
+  "online_offline_parity_passed": true,
+  "onnx_parity_passed": true,
+  "all_slice_regression_gates_passed": true,
+  "ab_ship_recommendation": "LAUNCH_GA_100_PERCENT",
+  "drift_incident_detected": true,
+  "generated_plots": [
+    "ablation_recall_at_low_fpr.png",
+    "roc_pr_curves_low_fpr.png",
+    "calibration_and_thresholds.png",
+    "slice_fp_reduction.png",
+    "ab_test_cuped_sequential.png",
+    "post_launch_drift_psi.png"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "events_verified": 500,
+  "num_features": 34,
+  "max_abs_discrepancy": 0.0,
+  "mean_abs_discrepancy": 0.0,
+  "parity_passed": true,
+  "top_feature_discrepancies": {
+    "graph_min_recipient_prior_count": 0.0,
+    "graph_min_recipient_decay_affinity": 0.0,
+    "graph_min_recipient_days_since_last": 0.0,
+    "graph_any_first_time_external": 0.0,
+    "graph_min_org_domain_prior_count": 0.0
+  },
+  "onnx_verification": {
+    "onnx_path": "/app/project/artifacts/med_lgbm.onnx",
+    "samples_verified": 256,
+    "max_abs_diff_float32": 1.1664597879962324e-07,
+    "onnx_parity_passed": true
+  },
+  "go_bundle": {
+    "bundle_path": "/app/project/artifacts/model_bundle.json",
+    "num_trees": 240,
+    "golden_vectors": 30
+  }
+}

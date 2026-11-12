@@ -1,0 +1,30 @@
+{
+  "incident_id": "INC-2026-1112-MED-04",
+  "alert_triggered": true,
+  "impacted_tenant": "tenant_finsight",
+  "diagnosed_root_cause_domain": "meridian-analytics.io",
+  "culprit_domain_event_volume": 194,
+  "culprit_domain_flagged_alerts": 74,
+  "tenant_score_psi": 0.16196,
+  "top_tenant_drifted_features_psi": {
+    "graph_min_org_domain_prior_count": 0.55386,
+    "graph_min_org_domain_share": 0.45344,
+    "sem_body_mentions_other_known_org": 0.4157,
+    "sem_attachment_org_mismatch": 0.16658,
+    "graph_any_first_time_external": 0.16211,
+    "dlp_has_financial_wire_or_pricing": 0.15792
+  },
+  "global_feature_psi_top5": {
+    "graph_min_org_domain_prior_count": 0.3686,
+    "graph_sender_external_ratio": 0.23212,
+    "graph_min_org_domain_share": 0.06679,
+    "graph_sender_cold_outreach_rate": 0.0449,
+    "sem_body_mentions_other_known_org": 0.04009
+  },
+  "finsight_alert_rate_reference": 0.03711,
+  "finsight_alert_rate_drift_unmitigated": 0.13026,
+  "finsight_benign_fpr_pre_mitigation": 0.10204,
+  "finsight_benign_fpr_post_mitigation": 0.00136,
+  "overall_drift_window_recall_post_mitigation": 0.9583,
+  "recommended_remediation": "Add verified M&A subsidiary 'meridian-analytics.io' to tenant_finsight trusted domain graph allowlist and schedule nightly graph warm-start backfill."
+}

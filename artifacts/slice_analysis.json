@@ -1,0 +1,176 @@
+{
+  "benign_slice_fpr_comparison": {
+    "vip_first_contact_sensitive": {
+      "count": 417,
+      "H0_Legacy_DLP_fpr_at_85rec": 0.97842,
+      "H3_MultiModal_LGBM_fpr_at_85rec": 0.0,
+      "H4_OutGuard_Hybrid_fpr_at_85rec": 0.0,
+      "H4_prod_nudge_fpr": 0.0
+    },
+    "recruiter_sales_cold_outreach": {
+      "count": 1214,
+      "H0_Legacy_DLP_fpr_at_85rec": 0.48764,
+      "H3_MultiModal_LGBM_fpr_at_85rec": 0.0,
+      "H4_OutGuard_Hybrid_fpr_at_85rec": 0.0,
+      "H4_prod_nudge_fpr": 0.0
+    },
+    "nickname_salutation": {
+      "count": 955,
+      "H0_Legacy_DLP_fpr_at_85rec": 0.11414,
+      "H3_MultiModal_LGBM_fpr_at_85rec": 0.0,
+      "H4_OutGuard_Hybrid_fpr_at_85rec": 0.0,
+      "H4_prod_nudge_fpr": 0.00105
+    },
+    "cc_warm_introduction": {
+      "count": 897,
+      "H0_Legacy_DLP_fpr_at_85rec": 0.0,
+      "H3_MultiModal_LGBM_fpr_at_85rec": 0.0,
+      "H4_OutGuard_Hybrid_fpr_at_85rec": 0.0,
+      "H4_prod_nudge_fpr": 0.0
+    },
+    "personal_self_forward": {
+      "count": 292,
+      "H0_Legacy_DLP_fpr_at_85rec": 0.0,
+      "H3_MultiModal_LGBM_fpr_at_85rec": 0.0,
+      "H4_OutGuard_Hybrid_fpr_at_85rec": 0.0,
+      "H4_prod_nudge_fpr": 0.0
+    },
+    "routine_reply_chain": {
+      "count": 521,
+      "H0_Legacy_DLP_fpr_at_85rec": 0.00192,
+      "H3_MultiModal_LGBM_fpr_at_85rec": 0.0,
+      "H4_OutGuard_Hybrid_fpr_at_85rec": 0.0,
+      "H4_prod_nudge_fpr": 0.00384
+    },
+    "standard_business": {
+      "count": 3426,
+      "H0_Legacy_DLP_fpr_at_85rec": 0.09545,
+      "H3_MultiModal_LGBM_fpr_at_85rec": 0.0,
+      "H4_OutGuard_Hybrid_fpr_at_85rec": 0.0,
+      "H4_prod_nudge_fpr": 0.00234
+    }
+  },
+  "threat_archetype_recall": {
+    "AUTOCOMPLETE_COLLISION": {
+      "count": 107,
+      "H0_recall_at_025fpr": 0.3551,
+      "H4_nudge_recall": 0.9533,
+      "H4_block_recall": 0.9065
+    },
+    "EXTERNAL_THREAD_LEAK": {
+      "count": 72,
+      "H0_recall_at_025fpr": 0.6944,
+      "H4_nudge_recall": 1.0,
+      "H4_block_recall": 1.0
+    },
+    "SALUTATION_MISMATCH": {
+      "count": 37,
+      "H0_recall_at_025fpr": 0.7838,
+      "H4_nudge_recall": 1.0,
+      "H4_block_recall": 1.0
+    },
+    "WRONG_TENANT_DIVERGENCE": {
+      "count": 42,
+      "H0_recall_at_025fpr": 0.0,
+      "H4_nudge_recall": 1.0,
+      "H4_block_recall": 1.0
+    },
+    "DOMAIN_TYPO_LEAK": {
+      "count": 20,
+      "H0_recall_at_025fpr": 0.9,
+      "H4_nudge_recall": 1.0,
+      "H4_block_recall": 1.0
+    }
+  },
+  "residual_false_positives_sample": [
+    {
+      "event_id": "evt_028050",
+      "eval_slice": "standard_business",
+      "sender_department": "Executive",
+      "score": 0.2122,
+      "first_time_ext": 1.0,
+      "dlp_blast": 0.738
+    },
+    {
+      "event_id": "evt_028669",
+      "eval_slice": "standard_business",
+      "sender_department": "Recruiting",
+      "score": 0.1657,
+      "first_time_ext": 0.0,
+      "dlp_blast": 0.8
+    },
+    {
+      "event_id": "evt_029779",
+      "eval_slice": "nickname_salutation",
+      "sender_department": "Recruiting",
+      "score": 0.1398,
+      "first_time_ext": 1.0,
+      "dlp_blast": 0.8
+    },
+    {
+      "event_id": "evt_030740",
+      "eval_slice": "standard_business",
+      "sender_department": "Engineering",
+      "score": 0.1388,
+      "first_time_ext": 0.0,
+      "dlp_blast": 0.8
+    },
+    {
+      "event_id": "evt_028568",
+      "eval_slice": "standard_business",
+      "sender_department": "Recruiting",
+      "score": 0.1105,
+      "first_time_ext": 0.0,
+      "dlp_blast": 0.8
+    }
+  ],
+  "residual_false_negatives_sample": [
+    {
+      "event_id": "evt_034041",
+      "misdirection_type": "AUTOCOMPLETE_COLLISION",
+      "score": 0.0004,
+      "prefix_gap": 0.498,
+      "dlp_blast": 0.338,
+      "body_other_org": 0.0
+    },
+    {
+      "event_id": "evt_027246",
+      "misdirection_type": "AUTOCOMPLETE_COLLISION",
+      "score": 0.0012,
+      "prefix_gap": 0.356,
+      "dlp_blast": 0.338,
+      "body_other_org": 0.0
+    },
+    {
+      "event_id": "evt_028778",
+      "misdirection_type": "AUTOCOMPLETE_COLLISION",
+      "score": 0.0015,
+      "prefix_gap": 0.555,
+      "dlp_blast": 0.338,
+      "body_other_org": 0.0
+    },
+    {
+      "event_id": "evt_034831",
+      "misdirection_type": "AUTOCOMPLETE_COLLISION",
+      "score": 0.0021,
+      "prefix_gap": 0.55,
+      "dlp_blast": 0.0,
+      "body_other_org": 0.0
+    },
+    {
+      "event_id": "evt_027407",
+      "misdirection_type": "AUTOCOMPLETE_COLLISION",
+      "score": 0.0107,
+      "prefix_gap": 0.743,
+      "dlp_blast": 0.0,
+      "body_other_org": 0.0
+    }
+  ],
+  "regression_gates": {
+    "vip_benign_nudge_fpr_below_0_5pct": true,
+    "nickname_salutation_nudge_fpr_below_0_5pct": true,
+    "recruiter_cold_outreach_nudge_fpr_below_0_5pct": true,
+    "wrong_tenant_known_contact_recall_above_75pct": true
+  },
+  "all_gates_passed": true
+}

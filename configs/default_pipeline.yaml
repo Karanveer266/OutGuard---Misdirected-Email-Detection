@@ -1,0 +1,55 @@
+seed: 42
+
+simulation:
+  num_tenants: 4
+  num_employees: 480
+  num_external_contacts: 1400
+  warmup_events: 8000
+  train_events: 14000
+  val_events: 5000
+  test_events: 8000
+  drift_events: 3000
+  base_misdirected_rate: 0.032
+  user_nudge_noise_rate: 0.015
+
+features:
+  recency_half_life_days: 14.0
+  min_prefix_len: 4
+  cold_outreach_prior_smoothing: 5.0
+  topic_svd_components: 12
+
+model:
+  lgbm:
+    n_estimators: 240
+    learning_rate: 0.045
+    num_leaves: 23
+    max_depth: 5
+    min_child_samples: 35
+    subsample: 0.85
+    colsample_bytree: 0.85
+    reg_alpha: 0.6
+    reg_lambda: 1.8
+    scale_pos_weight: 4.0
+
+thresholds:
+  block_max_fpr: 0.0005      # <= 0.05% FPR for hard outbound hold/block (5 per 10,000 benign emails)
+  nudge_max_fpr: 0.0025      # <= 0.25% FPR for interactive recipient confirmation nudge
+  bootstrap_rounds: 300
+
+guardrails:
+  recruiter_cold_outreach_rate_min: 0.26
+  verified_thread_min_prior_exchanges: 4
+  self_personal_email_name_sim_min: 0.88
+  hard_block_pii_prefix_gap_min: 0.55
+
+experimentation:
+  duration_days: 14
+  daily_outbound_volume: 25000
+  max_vip_nudge_override_rate: 0.35
+  max_p99_latency_ms: 25.0
+  alpha: 0.05
+
+monitoring:
+  psi_warning_threshold: 0.12
+  psi_critical_threshold: 0.25
+  alert_rate_spike_multiplier: 1.8
